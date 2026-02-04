@@ -4,20 +4,20 @@ import { useEffect, useState } from "react";
 import Script from "next/script";
 
 export default function Page() {
-  const [mounted, setMounted] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
-  if (!mounted) return null;
+    if (!mounted) return null;
 
-  return (
-    <>
-      <div
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: `
+    return (
+        <>
+            <div
+                suppressHydrationWarning
+                dangerouslySetInnerHTML={{
+                    __html: `
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THRR59R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
@@ -32,13 +32,13 @@ export default function Page() {
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/room.html">Room & Price</a></li>
-        <li><a href="/service.html">Service</a></li>
-        <li><a href="/food.html">Food</a></li>
+        <li><a href="/room">Room & Price</a></li>
+        <li><a href="/service">Service</a></li>
+        <li><a href="/food">Food</a></li>
         <li><a href="/category/information/">Information</a></li>
-        <li><a href="/faq.html">FAQ</a></li>
-        <li><a href="/access.html">Access</a></li>
-        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/access">Access</a></li>
+        <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -48,13 +48,13 @@ export default function Page() {
       <div class="inner">
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/room.html">Room & Price</a></li>
-          <li><a href="/service.html">Service</a></li>
-          <li><a href="/food.html">Food</a></li>
+          <li><a href="/room">Room & Price</a></li>
+          <li><a href="/service">Service</a></li>
+          <li><a href="/food">Food</a></li>
           <li><a href="/category/information/">Information</a></li>
-          <li><a href="/faq.html">FAQ</a></li>
-          <li><a href="/access.html">Access</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/access">Access</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
     </menu>
@@ -72,7 +72,7 @@ export default function Page() {
 
 <section id="top_view">
   <div class="video_hohoemi fadein_img">
-    <video src="img/top_mov.mp4" type="video/mp4" playsinline loop autoplay muted></video>
+    <video src="/img/top_mov.mp4" type="video/mp4" playsinline loop autoplay muted></video>
   </div>
   <h1 class="mov_txt">ほほえみ天使</h1>
   <div class="mov_txt2">302号室から撮影</div>
@@ -109,7 +109,7 @@ export default function Page() {
         <ul>
 
             <li class="about_inner">
-                <a href="/service.html#service_others">
+                <a href="/service#service_others">
                     <div class="item_container hover_num1">
                         <div class="item_img about_bg1">
 
@@ -131,7 +131,7 @@ export default function Page() {
             </li>
 
             <li class="about_inner">
-                <a href="/room.html#modal-09">
+                <a href="/room#modal-09">
                     <div class="item_container hover_num2">
                         <div class="item_img about_bg2">
 
@@ -152,7 +152,7 @@ export default function Page() {
             </li>
 
             <li class="about_inner">
-                <a href="/service.html#vod">
+                <a href="/service#vod">
                     <div class="item_container hover_num3">
                         <div class="item_img about_bg3">
 
@@ -193,7 +193,7 @@ export default function Page() {
             </li>
 
             <li class="about_inner">
-                <a href="/service.html">
+                <a href="/service">
                     <div class="item_container hover_num5">
                         <div class="item_img about_bg5">
 
@@ -214,7 +214,7 @@ export default function Page() {
             </li>
 
             <li class="about_inner">
-                <a href="/food.html">
+                <a href="/food">
                     <div class="item_container hover_num6">
                         <div class="item_img about_bg6">
 
@@ -281,7 +281,7 @@ export default function Page() {
     </section>
 
     <section id="intro_room">
-        <a href="/room.html">お部屋のご紹介</a>
+        <a href="/room">お部屋のご紹介</a>
     </section>
 
 
@@ -301,7 +301,7 @@ export default function Page() {
         </div>
 
         <section id="intro_room">
-            <a href="/access.html#spot">観光のご案内</a>
+            <a href="/access#spot">観光のご案内</a>
 
         </section>
 
@@ -376,19 +376,19 @@ export default function Page() {
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/room.html">Room & Price</a></li>
-        <li><a href="/service.html">Service</a></li>
-        <li><a href="/food.html">Food</a></li>
+        <li><a href="/room">Room & Price</a></li>
+        <li><a href="/service">Service</a></li>
+        <li><a href="/food">Food</a></li>
         <li><a href="/category/information/">Information</a></li>
-        <li><a href="/faq.html">FAQ</a></li>
-        <li><a href="/access.html">Access</a></li>
-        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/access">Access</a></li>
+        <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>
   </div>
 
   <div class="agree">
-    <div class="item_box"><a href="/agreement.html">宿泊約款</a></div>
+    <div class="item_box"><a href="/agreement">宿泊約款</a></div>
     <div class="item_box">HOTEL ほほえみ天使　<span class="span_br"><i class="icon-phone"></i><a href="tel:0563-62-7666">0563-62-7666</a></span>　<span class="span_br"><i class="icon-location"></i>愛知県西尾市鳥羽町八貫29-7</span></div>
   </div>
 
@@ -397,30 +397,30 @@ export default function Page() {
   </div>
 </footer>
 `,
-        }}
-      />
+                }}
+            />
 
-      {/* ===== 旧HTMLと同じ順序でJSを実行 ===== */}
-      <Script
-        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-        strategy="afterInteractive"
-      />
-      <Script
-        src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"
-        strategy="afterInteractive"
-      />
-      <Script
-        src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"
-        strategy="afterInteractive"
-      />
-      <Script
-        src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"
-        strategy="afterInteractive"
-      />
+            {/* ===== 旧HTMLと同じ順序でJSを実行 ===== */}
+            <Script
+                src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+                strategy="afterInteractive"
+            />
+            <Script
+                src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"
+                strategy="afterInteractive"
+            />
+            <Script
+                src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"
+                strategy="afterInteractive"
+            />
+            <Script
+                src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"
+                strategy="afterInteractive"
+            />
 
-      {/* 旧サイト独自JS */}
-      <Script src="/js/script.js" strategy="afterInteractive" />
-      <Script src="/js/effect.js" strategy="afterInteractive" />
-    </>
-  );
+            {/* 旧サイト独自JS */}
+            <Script src="/js/script.js" strategy="afterInteractive" />
+            <Script src="/js/effect.js" strategy="afterInteractive" />
+        </>
+    );
 }
