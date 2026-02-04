@@ -91,7 +91,7 @@ export default function Page() {
 </section>
 
 <section class="section_head">
- <h2 class="text_effect">開放的に。</h2> 
+ <h2 class="text_effect">開放的に。</h2>
   <p>高台にあるので外からお部屋の中を<span class="span_br">見られる心配がございません。</span> </p>
   <p>窓、カーテンを全開にして<span class="span_br">開放的なご気分でご利用下さい。</span></p>
 </section>
