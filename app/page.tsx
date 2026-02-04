@@ -1,6 +1,7 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
+import Script from "next/script";
 
 export default function Page() {
   const [mounted, setMounted] = useState(false);
@@ -12,104 +13,96 @@ export default function Page() {
   if (!mounted) return null;
 
   return (
-    <div
-      suppressHydrationWarning
-      dangerouslySetInnerHTML={{
-        __html: `
+    <>
+      <div
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: `
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THRR59R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-    <header>
+<header>
 
-        <div class="head_menu">
-            <div class="header_img">
-                <a href="/"><img src="/img/logo.png"></a>
+  <div class="head_menu">
+    <div class="header_img">
+      <a href="/"><img src="/img/logo.png"></a>
+    </div>
 
-            </div>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/room.html">Room & Price</a></li>
+        <li><a href="/service.html">Service</a></li>
+        <li><a href="/food.html">Food</a></li>
+        <li><a href="/category/information/">Information</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/access.html">Access</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/room.html">Room & Price</a></li>
-                    <li><a href="/service.html">Service</a></li>
-                    <li><a href="/food.html">Food</a></li>
-                    <li><a href="/category/information/">Information</a></li>
-                    <li><a href="/faq.html">FAQ</a></li>
-                    <li><a href="/access.html">Access</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-            </nav>
-
-        </div>
-
-        <div id="navArea">
-            <menu>
-                <div class="inner">
-
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/room.html">Room & Price</a></li>
-                        <li><a href="/service.html">Service</a></li>
-                        <li><a href="/food.html">Food</a></li>
-                        <li><a href="/category/information/">Information</a></li>
-                        <li><a href="/faq.html">FAQ</a></li>
-                        <li><a href="/access.html">Access</a></li>
-                        <li><a href="/contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </menu>
-
-            <div class="toggle_btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <div id="m_mask"></div>
-        </div>
-
-    </header>
-
-    <section id="top_view">
-
-        <div class="video_hohoemi fadein_img">
-            <video src="img/top_mov.mp4" type="video/mp4" playsinline loop autoplay muted>
-        </video></div>
-        <h1 class="mov_txt">ほほえみ天使</h1>
-        <div class="mov_txt2">302号室から撮影</div>
-
-    </section>
-
-    <section class="season_info">
+  <div id="navArea">
+    <menu>
+      <div class="inner">
         <ul>
-            <!-- <li><a href="https://hohoemitenshi.net/2025/07/30/2025%e5%b9%b4%e5%a4%8f%e5%ad%a3%e7%89%b9%e5%88%a5%e6%9c%9f%e9%96%93%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6%e3%80%82/">夏季特別期間について。</a>
-            </li> -->
-            <!-- <li><a href="https://hohoemitenshi.net/2025/12/23/%e5%b9%b4%e6%9c%ab%e5%b9%b4%e5%a7%8b%e7%89%b9%e5%88%a5%e6%9c%9f%e9%96%93%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6%e3%80%82//">年末年始特別期間について。</a>
-            </li> -->
-            <!-- <li><a href="https://hohoemitenshi.net/2022/05/01/%e3%82%af%e3%83%bc%e3%83%9d%e3%83%b3%e3%82%92%e3%81%94%e7%94%a8%e6%84%8f%e3%81%97%e3%81%be%e3%81%97%e3%81%9f%e3%80%82/">お得なクーポンをご用意しました。</a></li> -->
+          <li><a href="/">Home</a></li>
+          <li><a href="/room.html">Room & Price</a></li>
+          <li><a href="/service.html">Service</a></li>
+          <li><a href="/food.html">Food</a></li>
+          <li><a href="/category/information/">Information</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+          <li><a href="/access.html">Access</a></li>
+          <li><a href="/contact.html">Contact</a></li>
         </ul>
-    </section>
+      </div>
+    </menu>
 
-    <section class="section_head">
-        <h2 class="text_effect"><span>ひ</span><span>と</span><span>休</span><span>み</span><span>、</span><span>一</span><span>休</span><span>み</span><span>。</span></h2>
-        <p>ちょっと寄り道、日常の心身の疲れを<span class="span_br">そっと癒せる場所。</span> </p>
-        <p>「泊まる」ではなくて、いつでも帰ってこれる<span class="span_br">温かい場所。</span></p>
-    </section>
+    <div class="toggle_btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-    <section class="section_head">
-        <h2 class="text_effect"><span>開</span><span>放</span><span>的</span><span>に</span><span>。</span></h2>
-        <p>高台にあるので外からお部屋の中を<span class="span_br">見られる心配がございません。</span> </p>
-        <p>窓、カーテンを全開にして<span class="span_br">開放的なご気分でご利用下さい。</span></p>
-    </section>
+    <div id="m_mask"></div>
+  </div>
 
-    <section class="information animated">
-        <h2>Information</h2>
-        <ul>
-            <!-- microCMS 挿入ポイント（旧WordPress記事一覧の置換位置） -->
-        </ul>
-        <span class="chart"><a href="/category/information/">Infomation一覧はこちら</a></span>
-    </section>
+</header>
+
+<section id="top_view">
+  <div class="video_hohoemi fadein_img">
+    <video src="img/top_mov.mp4" type="video/mp4" playsinline loop autoplay muted></video>
+  </div>
+  <h1 class="mov_txt">ほほえみ天使</h1>
+  <div class="mov_txt2">302号室から撮影</div>
+</section>
+
+<section class="season_info">
+  <ul>
+    <!-- <li>...</li> -->
+  </ul>
+</section>
+
+<section class="section_head">
+  <h2 class="text_effect"><span>ひ</span><span>と</span><span>休</span><span>み</span><span>、</span><span>一</span><span>休</span><span>み</span><span>。</span></h2>
+  <p>ちょっと寄り道、日常の心身の疲れを<span class="span_br">そっと癒せる場所。</span> </p>
+  <p>「泊まる」ではなくて、いつでも帰ってこれる<span class="span_br">温かい場所。</span></p>
+</section>
+
+<section class="section_head">
+  <h2 class="text_effect"><span>開</span><span>放</span><span>的</span><span>に</span><span>。</span></h2>
+  <p>高台にあるので外からお部屋の中を<span class="span_br">見られる心配がございません。</span> </p>
+  <p>窓、カーテンを全開にして<span class="span_br">開放的なご気分でご利用下さい。</span></p>
+</section>
+
+<section class="information animated">
+  <h2>Information</h2>
+  <ul>
+    <!-- microCMS 挿入ポイント（旧WordPress記事一覧の置換位置） -->
+  </ul>
+  <span class="chart"><a href="/category/information/">Infomation一覧はこちら</a></span>
+</section>
 
     <section id="section_about">
 
@@ -366,52 +359,68 @@ export default function Page() {
                 </a>
             </div> -->
 
-            <div class="item_box">
-                <p>
-                    <満室の時は姉妹店へ>
-                </p>
-                <h3>ホテル プチエンゼル</h3>
-                <a href="https://ptangel.net"><img src="/img/angellogo.png"></a>
-            </div>
+<div class="item_box">
+  <p>
+    &lt;満室の時は姉妹店へ&gt;
+  </p>
+  <h3>ホテル プチエンゼル</h3>
+  <a href="https://ptangel.net"><img src="/img/angellogo.png"></a>
+</div>
         </div>
     </section>
 
 
 
-    <footer>
+<footer>
+  <div class="foot_menu">
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/room.html">Room & Price</a></li>
+        <li><a href="/service.html">Service</a></li>
+        <li><a href="/food.html">Food</a></li>
+        <li><a href="/category/information/">Information</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/access.html">Access</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 
-        <div class="foot_menu">
+  <div class="agree">
+    <div class="item_box"><a href="/agreement.html">宿泊約款</a></div>
+    <div class="item_box">HOTEL ほほえみ天使　<span class="span_br"><i class="icon-phone"></i><a href="tel:0563-62-7666">0563-62-7666</a></span>　<span class="span_br"><i class="icon-location"></i>愛知県西尾市鳥羽町八貫29-7</span></div>
+  </div>
 
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/room.html">Room & Price</a></li>
-                    <li><a href="/service.html">Service</a></li>
-                    <li><a href="/food.html">Food</a></li>
-                    <li><a href="/category/information/">Information</a></li>
-                    <li><a href="/faq.html">FAQ</a></li>
-                    <li><a href="/access.html">Access</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-            </nav>
+  <div class="copy_right">
+    Copyright © 2022 ホテル ほほえみ天使 <span class="span_br"> Rights Reserved.</span>
+  </div>
+</footer>
+`,
+        }}
+      />
 
-        </div>
+      {/* ===== 旧HTMLと同じ順序でJSを実行 ===== */}
+      <Script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        strategy="afterInteractive"
+      />
+      <Script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"
+        strategy="afterInteractive"
+      />
+      <Script
+        src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"
+        strategy="afterInteractive"
+      />
+      <Script
+        src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"
+        strategy="afterInteractive"
+      />
 
-        <div class="agree">
-            <div class="item_box"><a href="/agreement.html">宿泊約款</a></div>
-            <div class="item_box">HOTEL ほほえみ天使　<span class="span_br"><i class="icon-phone"></i><a href="tel:0563-62-7666">0563-62-7666</a></span>　<span class="span_br"><i class="icon-location"></i>愛知県西尾市鳥羽町八貫29-7</span></div>
-        </div>
-
-        <div class="copy_right">
-            Copyright © 2022 ホテル ほほえみ天使 <span class="span_br"> Rights Reserved.</span>
-        </div>
-    </footer>
-
-    <script type="text/javascript" src="/js/script.js"></script>
-    <script type="text/javascript" src="/js/effect.js"></script>
-    `,
-      }}
-    />
+      {/* 旧サイト独自JS */}
+      <Script src="/js/script.js" strategy="afterInteractive" />
+      <Script src="/js/effect.js" strategy="afterInteractive" />
+    </>
   );
 }
-
